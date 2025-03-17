@@ -1,0 +1,281 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    body {
+        background-color: #e0e0e0; /* Gris clair pour la page */
+        color: #333;
+        font-size: 16px;
+    }
+    
+}
+
+/* En-tête */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1C1C1C;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .logo img {
+    max-width: 120px;  /* Ajuste la largeur du logo */
+    height: auto;      /* Garde les proportions */
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header nav ul li a:hover {
+    color: #D4AF37;
+}
+
+/* Section Hero */
+.hero {
+    background-image: url('ImgDo/WhatsApp\ Image\ 2025-03-17\ à\ 02.10.19_bf43492c.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #D4AF37;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #C39A00;
+}
+
+/* Section À propos */
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 100px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-image img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+/* Section Services */
+.services {
+    padding: 60px 100px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 18px;
+}
+
+/* Section Portfolio */
+.portfolio {
+    padding: 60px 100px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.portfolio h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.portfolio-item {
+    display: inline-block;
+    margin: 20px;
+    width: 30%;
+    opacity: 0;  /* On commence avec une opacité à 0 pour l'animation fade-in */
+    transform: scale(0.9);  /* L'image commence légèrement réduite */
+    transition: transform 0.3s ease, opacity 0.6s ease;  /* Transition de l'animation */
+}
+
+/* Effet de zoom au survol sur desktop */
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);  /* L'image zoom sur le survol */
+}
+
+/* Animation fade-in lorsque l'élément devient visible dans la fenêtre */
+.portfolio-item.visible {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Animation pour les petits écrans */
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 100%;  /* Les images prennent toute la largeur sur mobile */
+        margin-bottom: 30px;  /* Plus d'espace entre les éléments */
+    }
+}
+
+
+/* Section Contact */
+.contact {
+    padding: 60px 100px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    width: 100%;
+    padding: 15px;
+    background-color: #D4AF37;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.contact button:hover {
+    background-color: #C39A00;
+}
+
+/* Footer */
+.footer {
+    background-color: #1C1C1C;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .services {
+        padding: 40px;
+    }
+
+    .service-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    .contact form {
+        width: 80%;
+    }
+
+    /* Réduire la taille du logo sur mobile */
+    .header .logo img {
+        max-width: 100px;
+    }
+}
