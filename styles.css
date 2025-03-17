@@ -279,3 +279,33 @@ body {
         max-width: 100px;
     }
 }
+
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;  /* Limite la largeur maximale sur grand écran */
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%; /* Les images ne doivent pas déborder */
+    height: auto;    /* Proportions conservées */
+}
+.section {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne sur mobile */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+}
+
